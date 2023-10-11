@@ -1,0 +1,18 @@
+{:paths ["src" "resources" "target"]
+ :deps {
+        camel-snake-kebab/camel-snake-kebab {:mvn/version"0.4.0"}
+        environ/environ {:mvn/version "1.1.0"}
+        me.raynes/fs {:mvn/version "1.4.6"}
+        avenir/avenir {:mvn/version "0.2.2"}
+        com.taoensso/timbre {:mvn/version "4.10.0"}
+        pom-versions/pom-versions {:mvn/version "0.1.2"}
+        adzerk/boot-test {:mvn/version "1.2.0" }
+        adzerk/bootlaces {:mvn/version "0.1.13" }
+        org.seleniumhq.selenium/selenium-java {:mvn/version "3.4.0"}}
+ :aliases {:lmgtfy         {:main-opts ["-m" "webica.lmgtfy"]}
+           :repl-server
+           {:exec-fn clojure.core.server/start-server
+            :exec-args {:name "repl-server"
+                        :port 5555
+                        :accept clojure.core.server/repl
+                        :server-daemon false}}}}
